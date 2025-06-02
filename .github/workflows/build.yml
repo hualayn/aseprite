@@ -9,7 +9,6 @@ jobs:
         os: [windows-latest]
         build_type: [Release]
         ui: [gui]
-        enable_ui: [on]
         include:
           - os: windows-latest
             build_type: Release
@@ -76,7 +75,6 @@ jobs:
 
         cmake -S . -B build -G Ninja \
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-          -DENABLE_UI=${{ matrix.enable_ui }} \
           -DENABLE_CCACHE=$enable_ccache \
           -DLAF_BACKEND=skia \
           -DSKIA_DIR=./skia \
