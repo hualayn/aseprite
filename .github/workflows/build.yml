@@ -72,7 +72,7 @@ jobs:
         else
           export skia_arch=x64
         fi
-
+        curl -L https://github.com/blueloveTH/aseprite/releases/download/v0.01/libcrypto-1_1-x64.dll --output libcrypto-1_1-x64.dll
         cmake -S . -B build -G Ninja \
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
           -DENABLE_CCACHE=$enable_ccache \
